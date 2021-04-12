@@ -1,14 +1,5 @@
-body{
-    margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-
-header {
-    background-color: #BBBBBB;
+header{
+    background: #BBBBBB;
     padding: 20px 0;
 }
 
@@ -17,7 +8,6 @@ header {
     width: 940px;
     margin: 0 auto;
 }
-
 nav {
     position: absolute;
     top: 110px;
@@ -26,79 +16,97 @@ nav {
 nav li{
     display: inline;
     margin: 0 0 0 15px;
+    
 }
-
 nav a{
     text-transform: uppercase;
     color: #000000;
     font-weight: bold;
     font-size: 22px;
     text-decoration: none;
+
 }
 
-nav a:hover{
+nav a:hover {
     color: #C78C19;
     text-decoration: underline;
 }
 
-.titulo-principal{
-    padding-left: 20px;
-    text-align: center;
-    margin: 0;
+.produtos {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
 }
 
-#banner {
-    width: 100%;
-    margin: 0;
-}
-
-.principal{
-    background: #CCCCCC;
-    padding: 30px;
-}
-
-.titulo-centralizado {
-    text-align: center;
-}
-.principal p {
-    text-align: center;
-}
-#missao {
-    font-size: 20px;
-}
-
-em strong{
-    color: red;
-}
-
-.itens {
-    font-style: italic;
-}
-
-.beneficios {
-    background: #FFFFFF;
-    padding: 20px;
-}
-
-.beneficios ul{
+.produtos li{
     display: inline-block;
-    vertical-align: top;
-    width: 20%;
-    margin-right: 15%;
-}
-
-.imagembeneficios{
-    width: 50%;
-}
-
-footer {
-    background: url(bg.jpg);
     text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+.produtos li:hover{
+    border-color: #C78C19;
+}
+
+.produtos li:hover h2{
+    font-size: 34px;
+}
+
+.produtos li:active{
+    border-color: #088C19;
+}
+
+.produtos h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.produto-descricao{
+    font-size: 18px;
+}
+
+.produto-preco {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer{
+    text-align: center;
+    background: url("bg.jpg");
     padding: 40px 0;
 }
 
-.copyright {
+.copyright{
     color: #FFFFFF;
-    font-size: 13px;;
+    font-size: 13px;
     margin: 20px 0 0;
+}
+
+main{
+    width: 940px;
+    margin: auto;
+}
+
+form{
+    margin: 40px 0;
+}
+
+form label{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+form input{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
 }
