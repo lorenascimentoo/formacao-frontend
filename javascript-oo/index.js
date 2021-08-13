@@ -1,30 +1,5 @@
-//Aplicando abstração
-class Cliente {
-    nome;
-    cpf;
-    }
-
-class ContaCorrente{
-    agencia;
-    // Aplicando encapsulamento
-     // #saldo =0 https://github.com/tc39/proposal-class-fields#private-fields
-    _saldo=0; // convenção entre a comunidade js pra indicar que um atributo é privado
-
-    sacar(valor){ //método que recebe um parâmetro
-        if(this._saldo >= valor){
-            this._saldo -= valor;
-            return valor;
-        }
-    }
-
-    depositar(valor){
-        //Verifica se os valores são válidos para depósito
-        if(valor<=0){
-            return;
-        }
-        this._saldo += valor;
-    }
-}
+import { Cliente } from "./Cliente.js"
+import {ContaCorrente} from "./ContaCorrente.js"
 
 const cliente1 = new Cliente();
 cliente1.nome = "Ricardo";
@@ -34,14 +9,17 @@ const cliente2 = new Cliente();
 cliente2.nome = "Alice";
 cliente2.cpf = 88822233309;
 
-const ContaCorrenteRicardo = new ContaCorrente();
-ContaCorrenteRicardo.agencia = 1001;
+const contaCorrenteRicardo = new ContaCorrente();
+contaCorrenteRicardo.agencia = 1001;
+contaCorrenteRicardo.cliente = cliente1;
+contaCorrenteRicardo.depositar(500);
 
-ContaCorrenteRicardo.depositar(-100);
-ContaCorrenteRicardo.depositar(100);
-ContaCorrenteRicardo.depositar(100);
+const conta2 = new ContaCorrente();
+conta2.cliente = cliente2;
+conta2.agencia = 102;
 
-const valorSacado = ContaCorrenteRicardo.sacar(50);
-console.log(valorSacado);
+let valor = 200;
+contaCorrenteRicardo.transferir(valor, conta2);
 
-console.log(ContaCorrenteRicardo);
+console.log(conta2);
+console.log(contaCorrenteRicardo);
